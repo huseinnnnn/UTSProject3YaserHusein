@@ -5,14 +5,14 @@
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Edit Pegawai</h1>
         </div>
-        <form method="post" action="/pegawai/{{ $pegawai->nip }}">
+        <form method="post" action="/pegawai/{{ $pegawai->nopeg }}">
             @method('PUT')
             @csrf
             <div class="mb-2">
-                <label for="nama" class="form-label">Nip</label>
-                <input type="text" class="form-control @error('nip') is-invalid @enderror" name="nip"
-                    value="{{ $pegawai->nip, old('nip') }}">
-                @error('nip')
+                <label for="nama" class="form-label">Nopeg</label>
+                <input type="text" class="form-control @error('nopeg') is-invalid @enderror" name="nopeg"
+                    value="{{ $pegawai->nopeg, old('nopeg') }}">
+                @error('nopeg')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>

@@ -9,9 +9,9 @@
             @csrf
             @method('put')
             <div class="mb-2">
-                <label for="nip" class="form-label">Nip</label>
-                <input name="nip" class="form-control" value="{{ $gaji->nip }}" readonly />
-                @error('nip')
+                <label for="nopeg" class="form-label">Nopeg</label>
+                <input name="nopeg" class="form-control" value="{{ $gaji->nopeg }}" readonly />
+                @error('nopeg')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>

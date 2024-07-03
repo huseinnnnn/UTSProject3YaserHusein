@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\DB;
 
 class PegawaiController extends Controller
 {
+
+
+
     public function index()
     {
         $pegawais = Pegawai::with('jabatan')->get();
@@ -27,18 +30,18 @@ class PegawaiController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'nip' => 'required|unique:pegawai|max:10|min:10',
-            'nama' => 'required',
-            'alamat' => 'required',
-            'tgl_lahir' => 'required|date',
-            'j_kelamin' => 'required',
-            'email' => 'required|email|unique:pegawai',
-            'id_jabatan' => 'required|exists:jabatan,id_jabatan',
-            'id_dept' => 'required|exists:department,id_dept',
-        ]);
-
         // dd($request->all());
+
+    $request->validate([
+        'nopeg' => 'required|unique:pegawai|max:10|min:10',
+        'nama' => 'required',
+        'alamat' => 'required',
+        'tgl_lahir' => 'required|date',
+        'j_kelamin' => 'required',
+        'email' => 'required|email|unique:pegawai',
+        'id_jabatan' => 'required|exists:jabatan,id_jabatan',
+        'id_dept' => 'required|exists:department,id_dept',
+    ]);// dd($request->all());
 
         Pegawai::create($request->all());
         // DB::insert(

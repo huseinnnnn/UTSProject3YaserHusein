@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('gaji', function (Blueprint $table) {
             $table->increments('id_gaji');
-            $table->integer('nip')->unsigned();
-            $table->foreign('nip')->references('nip')->on('pegawai');
+            $table->integer('nopeg')->unsigned();
+            $table->foreign('nopeg')->references('nopeg')->on('pegawai');
             $table->date('tgl_gaji');
             $table->integer('gaji');
             $table->integer('total_gaji');

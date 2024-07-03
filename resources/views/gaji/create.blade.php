@@ -8,14 +8,14 @@
         <form method="post" action="{{ route('gaji.store') }}">
             @csrf
             <div class="mb-2">
-                <label for="nip" class="form-label">Nip</label>
-                <select name="nip" id="nip" class="form-control">
+                <label for="nopeg" class="form-label">Nopeg</label>
+                <select name="nopeg" id="nopeg" class="form-control">
                     <option value="">---</option>
                     @foreach ($pegawai as $item)
-                        <option value="{{ $item->nip }}">{{ $item->nip }}</option>
+                        <option value="{{ $item->nopeg }}">{{ $item->nopeg }}</option>
                     @endforeach
                 </select>
-                @error('nip')
+                @error('nopeg')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>

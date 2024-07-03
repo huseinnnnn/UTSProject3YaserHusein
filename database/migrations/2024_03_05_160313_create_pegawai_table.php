@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pegawai', function (Blueprint $table) {
-            $table->unsignedInteger('nip')->unique();
+            $table->unsignedInteger('nopeg')->unique();
             $table->string('nama',25);
             $table->string('alamat', 50);
             $table->date('tgl_lahir');

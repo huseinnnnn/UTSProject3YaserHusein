@@ -16,7 +16,7 @@
             <tr>
                 <th>No</th>
                 <th>Nomor Absensi</th>
-                <th>Nip</th>
+                <th>Nopeg</th>
                 <th>Tanggal Absensi</th>
                 <th>Jam Masuk</th>
                 <th>Jam Keluar</th>
@@ -26,7 +26,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $absensi->id_absensi }}</td>
-                    <td>{{ $absensi->pegawai->nip }}</td>
+                    <td>{{ $absensi->pegawai->nopeg }}</td>
                     <td>{{ $absensi->tgl_absensi }}</td>
                     <td>{{ $absensi->jam_masuk }}</td>
                     <td>{{ $absensi->jam_keluar }}</td>

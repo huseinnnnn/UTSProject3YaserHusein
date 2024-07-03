@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('cuti', function (Blueprint $table) {
             $table->increments('id_cuti');
-            $table->integer('nip')->unsigned();
-            $table->foreign('nip')->references('nip')-> on('pegawai');
+            $table->integer('nopeg')->unsigned();
+            $table->foreign('nopeg')->references('nopeg')-> on('pegawai');
             $table->date('tgl_mulai');
             $table->date('tgl_selesai');
             $table->string('jenis_cuti', 50);

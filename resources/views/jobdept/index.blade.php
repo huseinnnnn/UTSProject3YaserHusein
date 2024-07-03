@@ -15,7 +15,7 @@
         <table class="table table-bordered table-sm my-4">
             <tr>
                 <th>No</th>
-                <th>Nip</th>
+                <th>Nopeg</th>
                 <th>Department</th>
                 <th>Jabatan</th>
                 <th>Tanggal Mulai</th>
@@ -24,7 +24,7 @@
             @foreach ($data as $item)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $item->nip }}</td>
+                    <td>{{ $item->nopeg }}</td>
                     <td>{{ $item->department->nama_dept }}</td>
                     <td>{{ $item->jabatan->nama_jabatan }}</td>
                     <td>{{ $item->tgl_mulai }}</td>

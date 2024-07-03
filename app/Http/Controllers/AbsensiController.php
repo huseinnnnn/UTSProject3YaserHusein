@@ -37,13 +37,13 @@ class AbsensiController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'nip' => 'required',
+            'nopeg' => 'required',
             'jam_masuk' => 'required',
             'jam_keluar' => 'required'
         ]);
 
         $absensi = new Absensi();
-        $absensi->nip = $validateData['nip'];
+        $absensi->nopeg = $validateData['nopeg'];
         $absensi->jam_masuk = $validateData['jam_masuk'];
         $absensi->jam_keluar = $validateData['jam_keluar'];
         $absensi->tgl_absensi = Carbon::now();

@@ -8,6 +8,7 @@ use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\KaryawanJobdeptController;
 use App\Http\Controllers\PegawaiController;
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,9 @@ Route::resource('absensi', AbsensiController::class);
 Route::resource('gaji', GajiController::class);
 Route::resource('cuti', CutiController::class);
 Route::resource('jobdept', KaryawanJobdeptController::class);
+
+// Route::get('/login',[LoginController::class,'login'])->name('login');
+
+// Route::post('/login',[LoginController::class,'authenticate']);
+
+// Route::post('/logout',[LoginController::class, 'logout']);

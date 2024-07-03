@@ -12,10 +12,10 @@
             <form method="post" action="/pegawai">
                 @csrf
                 <div class="mb-2">
-                    <label for="nama" class="form-label">Nip</label>
-                    <input type="text" class="form-control @error('nip') is-invalid @enderror" name="nip"
-                        value="{{ old('nip') }}">
-                    @error('nip')
+                    <label for="nama" class="form-label">Nopeg</label>
+                    <input type="text" class="form-control @error('nopeg') is-invalid @enderror" name="nopeg"
+                        value="{{ old('nopeg') }}">
+                    @error('nopeg')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>

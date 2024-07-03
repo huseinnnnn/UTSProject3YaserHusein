@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('karyawan_jobdept', function (Blueprint $table) {
             $table->increments('id_jobdept');
-            $table->integer('nip')->unsigned();
-            $table->foreign('nip')->references('nip')-> on('pegawai');
+            $table->integer('nopeg')->unsigned();
+            $table->foreign('nopeg')->references('nopeg')-> on('pegawai');
             $table->integer('id_dept')->unsigned();
             $table->foreign('id_dept')->references('id_dept')-> on('department');
             $table->integer('id_jabatan')->unsigned();

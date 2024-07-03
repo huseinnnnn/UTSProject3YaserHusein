@@ -9,9 +9,9 @@
             @csrf
             @method('put')
             <div class="mb-2">
-                <label for="nama" class="form-label">Nip</label>
-                <input name="nip" class="form-control" value="{{ $absensi->nip }}" readonly />
-                @error('nip')
+                <label for="nama" class="form-label">Nopeg</label>
+                <input name="nopeg" class="form-control" value="{{ $absensi->nopeg }}" readonly />
+                @error('nopeg')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
@@ -22,7 +22,7 @@
                 <label for="nama" class="form-label">Jam Masuk</label>
                 <input type="time" class="form-control @error('jam_masuk') is-invalid @enderror" name="jam_masuk"
                     value="{{ old('jam_masuk', $absensi->jam_masuk) }}">
-                @error('nip')
+                @error('nopeg')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>

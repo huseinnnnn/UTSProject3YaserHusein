@@ -15,7 +15,7 @@
         <table class="table table-bordered table-sm my-4">
             <tr>
                 <th>No</th>
-                <th>Nip</th>
+                <th>Nopeg</th>
                 <th>Tanggal</th>
                 <th>Gaji</th>
                 <th>Tunjangan</th>

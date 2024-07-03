@@ -9,9 +9,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Pegawai extends Model
 {
     use HasFactory;
-    protected $fillable = ['nip','nama','alamat','tgl_lahir','email', 'j_kelamin','id_jabatan','id_dept'];
+    protected $fillable = ['nopeg','nama','alamat','tgl_lahir','email', 'j_kelamin','id_jabatan','id_dept'];
     protected $table ='pegawai';
-    protected $primaryKey ='nip';
+    protected $primaryKey ='nopeg';
 
     public function jabatan(): BelongsTo {
         return $this->belongsTo(Jabatan::class, 'id_jabatan', 'id_jabatan');

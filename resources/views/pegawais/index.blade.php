@@ -14,7 +14,7 @@
     <table class="table table-bordered table-sm my-4">
         <tr>
             <th>No</th>
-            <th>Nip</th>
+            <th>Nopeg</th>
             <th>Nama Pegawai</th>
             <th>Alamat</th>
             <th>Tanggal Lahir</th>
@@ -27,7 +27,7 @@
         @foreach ($pegawais as $pegawai)
             <tr>
                 <td>{{ $loop->index + 1 }}</td>
-                <td>{{ $pegawai->nip }}</td>
+                <td>{{ $pegawai->nopeg }}</td>
                 <td>{{ $pegawai->nama }}</td>
                 <td>{{ $pegawai->alamat }}</td>
                 <td>{{ $pegawai->tgl_lahir }}</td>
@@ -36,10 +36,10 @@
                 <td>{{ $pegawai->jabatan->nama_jabatan }}</td>
                 <td>{{ $pegawai->department->nama_dept }}</td>
                 <td>
-                    <a href="/pegawai/{{ $pegawai->nip }}/edit" class="btn btn-warning btn-sm"> <span
+                    <a href="/pegawai/{{ $pegawai->nopeg }}/edit" class="btn btn-warning btn-sm"> <span
                             data-feather="edit">
                         </span>Edit</a>
-                    <form action="pegawai/{{ $pegawai->nip }}" method="post" class="d-inline">
+                    <form action="pegawai/{{ $pegawai->nopeg }}" method="post" class="d-inline">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn btn-danger btn-sm"

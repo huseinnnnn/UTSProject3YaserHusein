@@ -8,14 +8,14 @@
         <form method="post" action="{{ route('absensi.store') }}">
             @csrf
             <div class="mb-2">
-                <label for="nama" class="form-label">Nip</label>
-                <select name="nip" id="nip" class="form-control">
+                <label for="nama" class="form-label">Nopeg</label>
+                <select name="nopeg" id="nopeg" class="form-control">
                     <option value="">---</option>
                     @foreach ($pegawai as $item)
-                        <option value="{{ $item->nip }}">{{ $item->nip }}</option>
+                        <option value="{{ $item->nopeg }}">{{ $item->nopeg }}</option>
                     @endforeach
                 </select>
-                @error('nip')
+                @error('nopeg')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
@@ -26,7 +26,7 @@
                 <label for="nama" class="form-label">Jam Masuk</label>
                 <input type="time" class="form-control @error('jam_masuk') is-invalid @enderror" name="jam_masuk"
                     value="{{ old('jam_masuk') }}">
-                @error('nip')
+                @error('jam_masuk')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
@@ -47,3 +47,4 @@
         </form>
     </div>
 @endsection
+w

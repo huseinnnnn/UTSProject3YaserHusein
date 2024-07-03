@@ -10,12 +10,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class absensi extends Model
 {
     use HasFactory;
-    protected $fillable = ['nip', 'jam_masuk', 'jam_keluar', 'tgl_absensi'];
+    protected $fillable = ['nopeg', 'jam_masuk', 'jam_keluar', 'tgl_absensi'];
     protected $table = 'absensi';
-    protected $primaryKey = 'nip';
+    protected $primaryKey = 'id_absensi';
 
     public function pegawai(): BelongsTo {
-        return $this->belongsTo(pegawai::class, 'nip', 'nip');
+        return $this->belongsTo(pegawai::class, 'nopeg', 'nopeg');
     }
 
 }

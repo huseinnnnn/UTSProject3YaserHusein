@@ -9,9 +9,9 @@ use illuminate\Database\Eloquent\Relations\BelongsTo;
 class Karyawan_jobdept extends Model
 {
     use HasFactory;
-    protected $fillable = ['id_jobdept','nip','id_dept','id_jabatan','tgl_mulai'];
+    protected $fillable = ['id_jobdept','nopeg','id_dept','id_jabatan','tgl_mulai'];
     protected $table = 'karyawan_jobdept';
-    protected $primarykey = 'nip';
+    protected $primarykey = 'nopeg';
 
 
     public function department(): BelongsTo {
